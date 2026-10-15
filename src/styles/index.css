@@ -980,9 +980,9 @@ p {
 #tractor-intro-overlay.shutter-open .shutter-bottom {
   transform: translateY(100%);
 }
+/* Keep tractor visible as it finishes rolling off while shutters open */
 #tractor-intro-overlay.shutter-open .tractor-track {
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 /* Center Track Across Screen */
@@ -997,14 +997,14 @@ p {
   pointer-events: none;
 }
 
-/* The Tractor + Trolley Rig Driving Across (Super slow, majestic authentic pace) */
+/* The Tractor + Trolley Rig Driving Across (Steady, continuous linear crawl) */
 .tractor-rig {
   position: absolute;
   top: 0;
   left: 0;
   width: 520px;
   height: 220px;
-  animation: drive-across 8.0s cubic-bezier(0.28, 0.05, 0.28, 1) forwards;
+  animation: drive-across 4.2s linear forwards;
   will-change: transform;
 }
 
@@ -1013,7 +1013,7 @@ p {
     transform: translateX(-560px);
   }
   100% {
-    transform: translateX(calc(100vw + 200px));
+    transform: translateX(calc(100vw + 120px));
   }
 }
 
@@ -1021,7 +1021,7 @@ p {
   width: 100%;
   height: 100%;
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
-  animation: tractor-chug 0.4s ease-in-out infinite alternate;
+  animation: tractor-chug 0.35s ease-in-out infinite alternate;
 }
 
 /* Authentic Diesel Tractor Chug Vibration */
@@ -1034,9 +1034,9 @@ p {
   }
 }
 
-/* Rotating Tractor & Trolley Wheels (paced for slow crawl) */
+/* Rotating Tractor & Trolley Wheels (synced with steady drive) */
 .wheel {
-  animation: rotate-wheel 1.85s linear infinite;
+  animation: rotate-wheel 1.05s linear infinite;
   transform-box: fill-box;
   transform-origin: center;
 }
@@ -1069,13 +1069,13 @@ p {
   border-radius: 50%;
   background: rgba(85, 80, 75, 0.65);
   opacity: 0;
-  animation: smoke-puff-rise 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation: smoke-puff-rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 .smoke-1 { animation-delay: 0s; }
-.smoke-2 { animation-delay: 0.45s; }
-.smoke-3 { animation-delay: 0.9s; }
-.smoke-4 { animation-delay: 1.35s; }
+.smoke-2 { animation-delay: 0.3s; }
+.smoke-3 { animation-delay: 0.6s; }
+.smoke-4 { animation-delay: 0.9s; }
 
 @keyframes smoke-puff-rise {
   0% {
@@ -1088,7 +1088,7 @@ p {
     background: rgba(120, 115, 110, 0.5);
   }
   100% {
-    transform: translate(-110px, -100px) scale(3.8);
+    transform: translate(-100px, -90px) scale(3.5);
     opacity: 0;
   }
 }

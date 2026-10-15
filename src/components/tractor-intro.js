@@ -176,8 +176,15 @@ export function initTractorIntro(onComplete) {
     skipBtn.onclick = finish;
   }
 
-  // Automatic completion after tractor animation (7.6 seconds)
+  // Listen directly to tractor driving animation
+  const tractorRig = introEl.querySelector('.tractor-rig');
+  if (tractorRig) {
+    tractorRig.addEventListener('animationend', finish);
+  }
+
+  // Smoothly open shutters right as the tractor crosses the right edge (2.8 seconds)
+  // Zero dead time or waiting!
   setTimeout(() => {
     finish();
-  }, 7600);
+  }, 2800);
 }
