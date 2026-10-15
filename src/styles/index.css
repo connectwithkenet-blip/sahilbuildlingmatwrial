@@ -986,14 +986,14 @@ p {
   pointer-events: none;
 }
 
-/* The Tractor + Trolley Rig Driving Across */
+/* The Tractor + Trolley Rig Driving Across (Slow, heavy authentic pace) */
 .tractor-rig {
   position: absolute;
   top: 0;
   left: 0;
   width: 520px;
   height: 220px;
-  animation: drive-across 3.2s cubic-bezier(0.25, 1, 0.45, 1) forwards;
+  animation: drive-across 5.2s cubic-bezier(0.35, 0.05, 0.35, 1) forwards;
   will-change: transform;
 }
 
@@ -1010,11 +1010,22 @@ p {
   width: 100%;
   height: 100%;
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+  animation: tractor-chug 0.35s ease-in-out infinite alternate;
 }
 
-/* Rotating Tractor & Trolley Wheels */
+/* Authentic Diesel Tractor Chug Vibration */
+@keyframes tractor-chug {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2.5px);
+  }
+}
+
+/* Rotating Tractor & Trolley Wheels (paced for slower travel) */
 .wheel {
-  animation: rotate-wheel 0.8s linear infinite;
+  animation: rotate-wheel 1.25s linear infinite;
   transform-box: fill-box;
   transform-origin: center;
 }
@@ -1042,31 +1053,31 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: rgba(90, 85, 80, 0.6);
+  background: rgba(85, 80, 75, 0.65);
   opacity: 0;
-  animation: smoke-puff-rise 1.0s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation: smoke-puff-rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 .smoke-1 { animation-delay: 0s; }
-.smoke-2 { animation-delay: 0.25s; }
-.smoke-3 { animation-delay: 0.5s; }
-.smoke-4 { animation-delay: 0.75s; }
+.smoke-2 { animation-delay: 0.35s; }
+.smoke-3 { animation-delay: 0.7s; }
+.smoke-4 { animation-delay: 1.05s; }
 
 @keyframes smoke-puff-rise {
   0% {
-    transform: translate(0, 0) scale(0.5);
+    transform: translate(0, 0) scale(0.6);
     opacity: 0.85;
-    background: rgba(80, 75, 70, 0.7);
+    background: rgba(80, 75, 70, 0.75);
   }
   50% {
-    opacity: 0.5;
-    background: rgba(120, 115, 110, 0.45);
+    opacity: 0.55;
+    background: rgba(120, 115, 110, 0.5);
   }
   100% {
-    transform: translate(-70px, -75px) scale(3.2);
+    transform: translate(-90px, -90px) scale(3.5);
     opacity: 0;
   }
 }

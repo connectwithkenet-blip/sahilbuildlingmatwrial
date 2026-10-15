@@ -176,8 +176,8 @@ export function initTractorIntro(onComplete) {
     skipBtn.onclick = finish;
   }
 
-  // Automatic completion after tractor animation (3.2 seconds)
+  // Automatic completion after tractor animation (4.8 seconds)
   setTimeout(() => {
     finish();
-  }, 3200);
+  }, 4800);
 }
