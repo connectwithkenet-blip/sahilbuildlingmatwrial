@@ -299,7 +299,7 @@ p {
    ========================================================================== */
 
 .hero-section {
-  padding: 72px 0 80px;
+  padding: 84px 0 88px;
   background-color: var(--bg-base);
 }
 
@@ -335,15 +335,15 @@ p {
 }
 
 .hero-image-wrap {
-  width: 360px;
-  height: 360px;
+  width: 340px;
+  height: 340px;
   max-width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   border: 8px solid var(--bg-surface);
-  outline: 1px solid var(--border-color);
-  box-shadow: 0 8px 32px rgba(35, 28, 20, 0.12);
+  outline: 1.5px solid var(--border-strong);
+  box-shadow: 0 12px 36px rgba(40, 30, 20, 0.12), 0 2px 8px rgba(40, 30, 20, 0.06);
   background-color: var(--bg-cream);
   margin-left: auto;
   margin-right: auto;
@@ -355,8 +355,9 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 2%;
-  transform: scale(1.02);
+  object-position: center 1%;
+  transform-origin: center 20%;
+  transform: scale(1.07); /* Smoothly zooms past the black corner arcs while keeping full hair and face */
   filter: brightness(1.07) contrast(1.05) saturate(1.06); /* Refined warm natural complexion */
 }
 
@@ -561,8 +562,9 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 2%;
-  transform: scale(1.02);
+  object-position: center 1%;
+  transform-origin: center 20%;
+  transform: scale(1.07);
   filter: brightness(1.07) contrast(1.05) saturate(1.06); /* Refined warm natural complexion */
 }
 
