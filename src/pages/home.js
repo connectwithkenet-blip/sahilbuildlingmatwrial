@@ -616,5 +616,61 @@ export function renderHomePage() {
 
       </div>
     </section>
+
+    <!-- FAQ SECTION (LOCAL SEO RANKING BOOST) -->
+    <section class="section section-white" id="faq">
+      <div class="container">
+        
+        <div class="section-header" style="text-align: center; margin-bottom: 36px;">
+          <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-brick); margin-bottom: 8px;">
+            Frequently Asked Questions
+          </div>
+          <h2 class="section-title">Common questions about building materials in Rohini</h2>
+          <p class="section-desc" style="margin: 0 auto;">
+            Everything you need to know about wholesale rates, delivery zones, and site services.
+          </p>
+        </div>
+
+        <div style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+          
+          <div class="info-card">
+            <h4 style="font-size: 18px; margin-bottom: 8px;">Where is Sahil Building Material located in Rohini?</h4>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">
+              Our supply depot is at <strong>D-6/355, 4th Road, Pocket 6, Sector 6D, Rohini, Delhi 110085</strong>, near Vidya Jain Public School. We supply and deliver across all sectors of Rohini (Sector 1 to Sector 38), Pitampura, Shalimar Bagh, Prashant Vihar, and North-West Delhi.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h4 style="font-size: 18px; margin-bottom: 8px;">Which brands of cement and TMT steel rebars do you supply?</h4>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">
+              We are direct depot suppliers of <strong>UltraTech Cement, Ambuja Cement, ACC Cement, and JK Lakshmi Cement</strong> (fresh PPC and OPC 43/53 bags). For steel, we provide certified <strong>Tata Tiscon, Jindal Panther, Kamdhenu, and SAIL Fe-500D &amp; Fe-550D TMT rebars</strong> with computerized test slips and dharamkanta receipts.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h4 style="font-size: 18px; margin-bottom: 8px;">Do you provide Malwa loading and unloading (debris clearance) in Rohini?</h4>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">
+              Yes! We operate dedicated commercial tractors and tippers with experienced labour teams for fast <strong>Malwa Uthana (demolition rubble, soil, and construction debris clearance)</strong> to municipal disposal grounds, as well as safe site unloading for cement, bricks, and steel.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h4 style="font-size: 18px; margin-bottom: 8px;">How can I check today's current rates and place an order?</h4>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">
+              You can get instant current wholesale rates by calling Mr. Yogesh Seth directly at <a href="tel:+919873161704" style="color: var(--accent-brick); font-weight: 600;">+91 98731 61704</a> or by messaging us on <a href="https://wa.me/919873161704" target="_blank" style="color: var(--color-whatsapp); font-weight: 600;">WhatsApp (+91 98731 61704)</a>.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h4 style="font-size: 18px; margin-bottom: 8px;">What are the operating hours and payment options?</h4>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">
+              We are open <strong>7 days a week, Monday to Sunday from 8:00 AM to 8:00 PM</strong>. We accept UPI (Google Pay, PhonePe, Paytm), Cash, Cheque, and RTGS / NEFT bank transfers.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
   `;
 }
