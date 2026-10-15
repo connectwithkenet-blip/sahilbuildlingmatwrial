@@ -82,7 +82,7 @@ export class Router {
     if (metaDesc) metaDesc.setAttribute('content', routeConfig.desc);
 
     // Update Canonical URL
-    const canonicalUrl = `https://sahilbuildingmaterial.in${this.currentPath === '/' ? '' : this.currentPath}`;
+    const canonicalUrl = `https://www.sahilbuildingmaterial.in${this.currentPath === '/' ? '' : this.currentPath}`;
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl);
