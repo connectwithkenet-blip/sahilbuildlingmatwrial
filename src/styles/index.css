@@ -1,30 +1,38 @@
 /* ==========================================================================
-   SAHIL BUILDING MATERIAL — CLEAN PREMIUM LIGHT THEME
-   Palette: Warm White #FFFFFF, Soft Cream #FAF6EE / #F3ECDF, Charcoal #1F1B16,
-   Muted Brick #9E3F2A, WhatsApp #1FA855, Border #E6DFD2
+   SAHIL BUILDING MATERIAL — RICH WARM ARCHITECTURAL CREAM THEME
+   Palette: Rich Cream Base #F7F2E7, Warm Ivory Surface #FFFDF8,
+   Sandstone Accent #EDE4D3, Warm Beige Footer #E3D7C1, Espresso #231C14,
+   Terracotta Brick #9E3F2A, Warm Linen Border #DFD4C0
    ========================================================================== */
 
 :root {
-  --bg-white: #FFFFFF;
-  --bg-cream: #FAF6EE;
-  --bg-cream-alt: #F3ECDF;
-  --text-primary: #1F1B16;
-  --text-secondary: #6B6358;
-  --text-muted: #8E8578;
-  --accent-brick: #9E3F2A;
+  /* Warm Architectural Cream Colors */
+  --bg-base: #F7F2E7;             /* Main page warm creamy background */
+  --bg-surface: #FFFDF8;          /* Warm ivory cream for cards, boxes, inputs */
+  --bg-cream: #EDE4D3;            /* Soft creamy sandstone for alternating sections / strips */
+  --bg-cream-alt: #E3D7C1;        /* Rich warm cream/beige for footer & accent panels */
+  --bg-white: var(--bg-surface);  /* Replaces all stark white with warm ivory cream */
+
+  --text-primary: #231C14;        /* Deep charred espresso charcoal */
+  --text-secondary: #584F43;      /* Warm earth tone */
+  --text-muted: #857867;          /* Warm sandstone taupe */
+
+  --accent-brick: #9E3F2A;        /* Authentic brick terracotta */
   --accent-brick-hover: #843220;
-  --color-whatsapp: #1FA855;
-  --color-whatsapp-hover: #198B46;
-  --border-color: #E6DFD2;
-  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --color-whatsapp: #1E9E50;
+  --color-whatsapp-hover: #178341;
+
+  --border-color: #DFD4C0;        /* Warm linen border */
+  --border-strong: #CBBCA3;
+  --card-shadow: 0 4px 18px rgba(60, 45, 25, 0.06);
+  --card-shadow-hover: 0 10px 28px rgba(60, 45, 25, 0.1);
 
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
   --radius-full: 9999px;
 
   --max-width: 1120px;
@@ -42,7 +50,7 @@ html {
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-primary);
-  background-color: var(--bg-white);
+  background-color: var(--bg-base);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
@@ -50,7 +58,8 @@ html {
 body {
   min-height: 100vh;
   position: relative;
-  background-color: var(--bg-white);
+  background-color: var(--bg-base);
+  color: var(--text-primary);
   overflow-x: hidden;
 }
 
@@ -116,7 +125,7 @@ p {
 }
 
 .section-white {
-  background-color: var(--bg-white);
+  background-color: var(--bg-base);
 }
 
 .section-cream {
@@ -187,7 +196,9 @@ p {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: var(--bg-white);
+  background-color: rgba(247, 242, 231, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-color);
   height: 72px;
   display: flex;
@@ -289,7 +300,7 @@ p {
 
 .hero-section {
   padding: 72px 0 80px;
-  background-color: var(--bg-white);
+  background-color: var(--bg-base);
 }
 
 .hero-grid {
@@ -330,9 +341,9 @@ p {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
-  border: 8px solid #FFFFFF;
+  border: 8px solid var(--bg-surface);
   outline: 1px solid var(--border-color);
-  box-shadow: 0 8px 32px rgba(31, 27, 22, 0.1);
+  box-shadow: 0 8px 32px rgba(35, 28, 20, 0.12);
   background-color: var(--bg-cream);
   margin-left: auto;
   margin-right: auto;
@@ -536,9 +547,9 @@ p {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
-  border: 6px solid #FFFFFF;
+  border: 6px solid var(--bg-surface);
   outline: 1px solid var(--border-color);
-  box-shadow: 0 6px 24px rgba(31, 27, 22, 0.08);
+  box-shadow: 0 6px 24px rgba(35, 28, 20, 0.1);
   background-color: var(--bg-cream);
   display: flex;
   align-items: center;
