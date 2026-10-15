@@ -9,20 +9,20 @@ export function renderServicesPage() {
         <div class="container">
           
           <div class="section-header">
-            <h1 class="section-title">Malwa uthana and site unloading</h1>
+            <h1 class="section-title">Malwa loading and unloading services</h1>
             <p class="section-desc">
-              Reliable construction site logistics in Rohini &amp; North-West Delhi. From rapid debris clearance with commercial tippers to careful manual unloading by trained labour teams.
+              Reliable construction site logistics in Rohini &amp; North-West Delhi. Commercial tractors and tippers for rapid debris loading, and trained labour teams for safe unloading.
             </p>
           </div>
 
           <div class="services-grid">
             
-            <!-- Service 1: Malwa Uthana -->
+            <!-- Service 1: Malwa Loading & Removal -->
             <div class="service-card">
               <div>
-                <h2 class="service-title">Malwa uthana (debris removal)</h2>
+                <h2 class="service-title">Malwa loading &amp; debris removal (Malwa Uthana)</h2>
                 <p class="service-desc">
-                  Demolition rubble, old plaster, broken tiles, and excavated earth can block roads and stall your project. We deploy commercial tipper trucks, tempos, and experienced labour to clear your site quickly.
+                  Demolition rubble, old plaster, broken tiles, and excavated earth can block roads and stall your project. We deploy commercial tractors, tippers, tempos, and experienced labour to clear your site quickly.
                 </p>
                 <ul class="service-points">
                   <li>

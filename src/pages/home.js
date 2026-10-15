@@ -234,20 +234,20 @@ export function renderHomePage() {
       <div class="container">
         
         <div class="section-header">
-          <h2 class="section-title">Site services</h2>
+          <h2 class="section-title">Malwa loading and unloading services</h2>
           <p class="section-desc">
-            Complete construction logistics in Rohini. Dedicated commercial tippers for debris removal and trained labour teams for safe unloading.
+            Complete construction site logistics in Rohini. Dedicated commercial tractors and tippers for debris loading &amp; clearance, and trained labour teams for safe unloading.
           </p>
         </div>
 
         <div class="services-grid">
           
-          <!-- Card 1: Malwa Uthana -->
+          <!-- Card 1: Malwa Loading & Removal -->
           <div class="service-card">
             <div>
-              <h3 class="service-title">Malwa uthana (debris removal)</h3>
+              <h3 class="service-title">Malwa loading &amp; debris removal (Malwa Uthana)</h3>
               <p class="service-desc">
-                Fast clearance of demolition rubble, broken bricks, plaster, and excavated soil from residential and commercial sites across North-West Delhi.
+                Fast clearance of demolition rubble, broken bricks, plaster, and excavated soil from residential and commercial sites across North-West Delhi with tractors and tippers.
               </p>
               <ul class="service-points">
                 <li>

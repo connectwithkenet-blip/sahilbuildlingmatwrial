@@ -17,7 +17,7 @@ export function renderNavbar(activePath = '/') {
           <ul class="nav-links-desktop">
             <li><a href="/" class="nav-link nav-link-route ${activePath === '/' ? 'active' : ''}" data-path="/">Home</a></li>
             <li><a href="/materials" class="nav-link nav-link-route ${activePath === '/materials' ? 'active' : ''}" data-path="/materials">Materials</a></li>
-            <li><a href="/services" class="nav-link nav-link-route ${activePath === '/services' ? 'active' : ''}" data-path="/services">Malwa and Unloading</a></li>
+            <li><a href="/services" class="nav-link nav-link-route ${activePath === '/services' ? 'active' : ''}" data-path="/services">Malwa Loading &amp; Unloading</a></li>
             <li><a href="/about" class="nav-link nav-link-route ${activePath === '/about' ? 'active' : ''}" data-path="/about">About</a></li>
             <li><a href="/contact" class="nav-link nav-link-route ${activePath === '/contact' ? 'active' : ''}" data-path="/contact">Contact</a></li>
           </ul>
@@ -50,7 +50,7 @@ export function renderNavbar(activePath = '/') {
         <ul class="mobile-nav-list">
           <li><a href="/" class="mobile-nav-item nav-link-route" data-path="/">Home</a></li>
           <li><a href="/materials" class="mobile-nav-item nav-link-route" data-path="/materials">Materials</a></li>
-          <li><a href="/services" class="mobile-nav-item nav-link-route" data-path="/services">Malwa and Unloading</a></li>
+          <li><a href="/services" class="mobile-nav-item nav-link-route" data-path="/services">Malwa Loading &amp; Unloading</a></li>
           <li><a href="/about" class="mobile-nav-item nav-link-route" data-path="/about">About</a></li>
           <li><a href="/contact" class="mobile-nav-item nav-link-route" data-path="/contact">Contact</a></li>
         </ul>
