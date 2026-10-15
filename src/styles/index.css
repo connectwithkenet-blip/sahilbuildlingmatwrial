@@ -355,8 +355,8 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
-  transform: scale(1.12); /* Zooms past the black outer corner vignette */
+  object-position: center 2%;
+  transform: scale(1.02);
   filter: brightness(1.07) contrast(1.05) saturate(1.06); /* Refined warm natural complexion */
 }
 
@@ -561,8 +561,8 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
-  transform: scale(1.12); /* Zooms past the black outer corner vignette */
+  object-position: center 2%;
+  transform: scale(1.02);
   filter: brightness(1.07) contrast(1.05) saturate(1.06); /* Refined warm natural complexion */
 }
 
@@ -811,15 +811,18 @@ p {
   left: 0;
   right: 0;
   z-index: 98;
-  background-color: var(--bg-white);
+  background-color: rgba(252, 250, 246, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid var(--border-color);
-  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  padding: 8px 14px calc(8px + env(safe-area-inset-bottom));
   gap: 10px;
+  box-shadow: 0 -4px 16px rgba(40, 30, 20, 0.08);
 }
 
 .btn-mobile-action {
   flex: 1;
-  height: 46px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -830,35 +833,89 @@ p {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN (375px up to 1920px)
+   RESPONSIVE DESIGN (Mobile & Tablet)
    ========================================================================== */
 
+/* Clearance for sticky header when scrolling or navigating */
+h1, h2, h3, .section-title, .section, #materials, #services {
+  scroll-margin-top: 76px;
+}
+
 @media (max-width: 820px) {
+  .site-header {
+    height: 60px;
+  }
+  .brand-title {
+    font-size: 19px;
+  }
+  .brand-sub {
+    font-size: 11px;
+  }
+  .mobile-drawer {
+    top: 60px;
+  }
   .nav-links-desktop, .nav-cta-group .btn-whatsapp {
     display: none;
   }
   .mobile-toggle {
     display: flex;
   }
+
+  /* Compact, beautifully spaced mobile hero */
+  .hero-section {
+    padding: 24px 0 32px;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 20px;
+    text-align: center;
   }
+  .hero-title {
+    font-size: clamp(26px, 7vw, 34px);
+    line-height: 1.25;
+  }
+  .hero-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .hero-actions {
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero-image-wrap {
+    width: 220px;
+    height: 220px;
+    margin: 10px auto 0;
+    border-width: 5px;
+  }
+
   .owner-card {
     grid-template-columns: 1fr;
-    padding: 28px;
+    padding: 24px;
+    text-align: center;
   }
   .owner-photo {
-    max-width: 240px;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  .owner-quote {
+    font-size: 17px;
+    padding-left: 14px;
   }
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .reviews-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   .footer-top {
     grid-template-columns: 1fr 1fr;
@@ -867,14 +924,32 @@ p {
 
 @media (max-width: 768px) {
   .section {
-    padding: 56px 0;
+    padding: 40px 0 48px;
+    scroll-margin-top: 68px;
+  }
+  .section-header {
+    margin-bottom: 24px;
+  }
+  .section-title {
+    font-size: 26px;
+    line-height: 1.3;
+    padding-top: 6px;
   }
   .facts-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 16px;
+  }
+  .materials-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-bottom: 20px;
+  }
+  .material-card {
+    padding: 22px;
   }
   .footer-top {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
   .floating-whatsapp {
     display: none; /* Mobile sticky bar replaces it */
@@ -883,7 +958,7 @@ p {
     display: flex;
   }
   body {
-    padding-bottom: 66px; /* Avoid overlapping sticky bar */
+    padding-bottom: 96px; /* Generous clearance so fixed bottom bar never covers content or buttons */
   }
 }
 
@@ -1094,8 +1169,32 @@ p {
 }
 
 @media (max-width: 600px) {
+  .shutter-top {
+    padding-bottom: 24px;
+  }
+  .shutter-bottom {
+    padding-top: 24px;
+  }
+  .shutter-brand-title {
+    font-size: 22px;
+  }
+  .shutter-brand-sub {
+    font-size: 11px;
+  }
+  .shutter-tagline {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .shutter-skip-btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+  .tractor-track {
+    height: 150px;
+  }
   .tractor-rig {
-    transform-origin: left bottom;
-    scale: 0.75;
+    width: 380px;
+    height: 150px;
+    transform-origin: center center;
   }
 }
