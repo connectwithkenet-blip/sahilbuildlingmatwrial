@@ -598,24 +598,66 @@ p {
 }
 
 /* ==========================================================================
-   REVIEWS SECTION
+   REVIEWS SECTION (INFINITE LIVE CONTINUOUS MARQUEE)
    ========================================================================== */
 
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.reviews-section-wrap {
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+.reviews-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 12px 0 20px;
+  /* Soft edge fade for ultra-premium look */
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.reviews-marquee-track {
+  display: flex;
   gap: 24px;
+  width: max-content;
+  animation: reviews-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover/touch so user can read */
+.reviews-marquee-container:hover .reviews-marquee-track,
+.reviews-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes reviews-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .review-card {
-  background-color: var(--bg-white);
+  width: 360px;
+  flex-shrink: 0;
+  background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 30px;
+  padding: 28px;
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  user-select: none;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: #D6CEBF;
 }
 
 .review-stars {
@@ -909,10 +951,6 @@ h1, h2, h3, .section-title, .section, #materials, #services {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .reviews-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -946,6 +984,21 @@ h1, h2, h3, .section-title, .section, #materials, #services {
   }
   .material-card {
     padding: 22px;
+  }
+  .reviews-section-wrap {
+    padding: 36px 0 44px;
+  }
+  .review-card {
+    width: 290px;
+    padding: 20px 22px;
+  }
+  .review-quote {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .reviews-marquee-track {
+    gap: 16px;
+    animation-duration: 22s;
   }
   .footer-top {
     grid-template-columns: 1fr;
