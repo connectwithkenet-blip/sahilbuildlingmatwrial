@@ -18,11 +18,16 @@ export function renderAboutPage() {
           <!-- Owner Card -->
           <div class="owner-card" style="margin-bottom: 64px;">
             <div class="owner-photo">
-              <img 
-                src="/assets/images/owner.jpg" 
-                alt="Mr. Yogesh Seth, Founder and Proprietor" 
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="/assets/images/owner.webp" type="image/webp">
+                <img 
+                  src="/assets/images/owner.jpg" 
+                  alt="Mr. Yogesh Seth, Founder and Proprietor" 
+                  width="642"
+                  height="708"
+                  loading="lazy"
+                />
+              </picture>
             </div>
             <div class="owner-details">
               <div>

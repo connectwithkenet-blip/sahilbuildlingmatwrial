@@ -32,11 +32,17 @@ export function renderHomePage() {
 
         <!-- Right: Clean Framed Image -->
         <div class="hero-image-wrap">
-          <img 
-            src="/assets/images/owner.jpg" 
-            alt="Mr. Yogesh Seth, Sahil Building Material Rohini Sector 6D" 
-            loading="eager"
-          />
+          <picture>
+            <source srcset="/assets/images/owner.webp" type="image/webp">
+            <img 
+              src="/assets/images/owner.jpg" 
+              alt="Mr. Yogesh Seth, Sahil Building Material Rohini Sector 6D" 
+              width="642"
+              height="708"
+              fetchpriority="high"
+              loading="eager"
+            />
+          </picture>
         </div>
 
       </div>
@@ -317,11 +323,16 @@ export function renderHomePage() {
         
         <div class="owner-card">
           <div class="owner-photo">
-            <img 
-              src="/assets/images/owner.jpg" 
-              alt="Mr. Yogesh Seth - Founder & Proprietor" 
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="/assets/images/owner.webp" type="image/webp">
+              <img 
+                src="/assets/images/owner.jpg" 
+                alt="Mr. Yogesh Seth - Founder & Proprietor" 
+                width="642"
+                height="708"
+                loading="lazy"
+              />
+            </picture>
           </div>
           <div class="owner-details">
             <div>
